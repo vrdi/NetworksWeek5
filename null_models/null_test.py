@@ -8,7 +8,7 @@ Created on Mon Jul 15 13:41:51 2019
 import networkx as nx
 from gerrychain import Graph
 import matplotlib.pyplot as plt
-g = Graph.from_json("./County05.json")
+g = Graph.from_json("./BG05.json")
 
 
 n = len(g.nodes())
