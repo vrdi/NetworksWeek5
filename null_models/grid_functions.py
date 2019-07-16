@@ -146,7 +146,7 @@ def walker_grid(n=20,m=20,k=20,ns=500):
 
     return grid
 
-def tree_grid(n=20,m=20,k=40,varepsilon=0):
+def tree_grid(n=20,m=20,k=40,varepsilon=0.01):
     graph = nx.grid_graph([n,m])
 
 
@@ -163,7 +163,7 @@ def tree_grid(n=20,m=20,k=40,varepsilon=0):
     
     dg=nx.Graph()
     for edge in initial_partition["cut_edges"]:
-        dg.add_edge(edge[0],edge[1])
+        dg.add_edge(cddict[edge[0]],cddict[edge[1]])
         
     return dg
     
